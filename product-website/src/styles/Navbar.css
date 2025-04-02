@@ -1,0 +1,37 @@
+/* Navbar background color */
+.navbar-custom {
+    background-color: #efeeee !important; /* Your custom color */
+  }
+  
+  /* Hamburger icon color */
+  .navbar-toggler-icon {
+    background-color: #efeeee !important;
+  }
+  
+  /* Offcanvas background color */
+  .offcanvas-custom {
+    background-color: #49217b !important;
+  }
+  
+  /* Link styling */
+  .nav-link {
+    color: #070606 !important;
+  }
+  
+  .nav-link:hover {
+    color: #fff !important;
+  }
+  #menu{
+    font-size: 40px;
+  }
+
+  .flex-column{
+    font-size: 20px;
+    
+  }
+  .menu-item{
+    /* border: 1px solid black; */
+    /* border-radius: 15%; */
+    color: black;
+    padding-bottom: 5%;
+  }
