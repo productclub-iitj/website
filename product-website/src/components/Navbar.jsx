@@ -1,41 +1,35 @@
 import { useState } from 'react';
 import { Navbar, Offcanvas, Nav, Container } from 'react-bootstrap';
+import "../styles/Navbar.css";
+import logo from '../images/logo.png';
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand={false}>
+      <Navbar bg="dark" variant="dark" expand={false} className="navbar-custom">
         <Container>
           {/* Logo on the left */}
-          <Navbar.Brand href="#home">
-            <img
-              src="/logo.png" // Replace with your logo path
-              alt="Logo"
-              height="40"
-              className="d-inline-block align-top"
-            />
+          <Navbar.Brand href="/">
+            <img src={logo} alt="Logo" className="d-inline-block align-top" />
           </Navbar.Brand>
           
           {/* Hamburger icon on the right */}
-          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
+          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={() => setShow(true)} />
         </Container>
       </Navbar>
 
       {/* Offcanvas Menu */}
-      <Offcanvas show={show} onHide={handleClose} placement="end" style={{ backgroundColor: '#212529', color: '#fff' }}>
+      <Offcanvas show={show} onHide={() => setShow(false)} placement="end" className="offcanvas-custom">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Menu</Offcanvas.Title>
+          <Offcanvas.Title id='menu'>Menu</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="flex-column">
-            <Nav.Link href="#about" onClick={handleClose}>About</Nav.Link>
-            <Nav.Link href="#team" onClick={handleClose}>Team</Nav.Link>
-            <Nav.Link href="#resources" onClick={handleClose}>Resources</Nav.Link>
+            <Nav.Link href="#about" onClick={() => setShow(false)}>About</Nav.Link>
+            <Nav.Link href="#team" onClick={() => setShow(false)}>Team</Nav.Link>
+            <Nav.Link href="#resources" onClick={() => setShow(false)}>Resources</Nav.Link>
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>

@@ -1,0 +1,121 @@
+body {
+    background: rgb(251, 251, 251);
+/* background: linear-gradient(90deg, rgba(108,108,99,1) 0%, rgba(142,129,86,1) 46%, rgba(166,166,138,1) 100%); */
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#main-heading {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 4rem;
+    font-weight: bold;
+    color: black; /* Ensure visibility */
+    animation: fadeInUp 1s ease-out;
+}
+
+
+/* Full-width image */
+img {
+    width: 100%;
+    height: 600px;
+    /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Styling for the "who-we" section */
+.who-we {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+    border: 2px solid #ccc;
+    /* border-radius: 3%; */
+    border-left: none;
+    border-right: none;
+}
+
+/* Heading styles for "WHO WE ARE" */
+#head-who {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #ffb400;
+}
+
+/* Paragraph styles for "WHO WE ARE" */
+#who-p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+/* Heading styles for "WHAT WE DO" */
+#head-what {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #ffb400;
+}
+
+/* Paragraph styles for "WHAT WE DO" */
+#what-p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+/* Achievements Section */
+.achievements {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+#achievements-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+/* Achievements Grid */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual Achievement Card */
+.achievement-card {
+    background-color: #f0be4a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    color: #222;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+}
+

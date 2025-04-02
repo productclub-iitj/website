@@ -1,37 +1,48 @@
-/* Navbar background color */
+/* Navbar Customization */
 .navbar-custom {
-    background-color: #efeeee !important; /* Your custom color */
-  }
-  
-  /* Hamburger icon color */
-  .navbar-toggler-icon {
-    background-color: #efeeee !important;
-  }
-  
-  /* Offcanvas background color */
-  .offcanvas-custom {
-    background-color: #49217b !important;
-  }
-  
-  /* Link styling */
-  .nav-link {
-    color: #070606 !important;
-  }
-  
-  .nav-link:hover {
-    color: #fff !important;
-  }
-  #menu{
-    font-size: 40px;
-  }
+  background-color: #898479 !important;
+  padding: 10px 15px;
+}
 
-  .flex-column{
-    font-size: 20px;
-    
-  }
-  .menu-item{
-    /* border: 1px solid black; */
-    /* border-radius: 15%; */
-    color: black;
-    padding-bottom: 5%;
-  }
+/* Logo Styling */
+.navbar-brand img {
+  height: 35px; /* Reduce logo size */
+  max-width: 150px;
+}
+
+/* Hamburger Button */
+.navbar-toggler {
+  border: none;
+}
+
+/* Offcanvas Custom Styling */
+.offcanvas-custom {
+  background-color: #ffb400 !important;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Offcanvas Menu */
+.offcanvas-header {
+  border-bottom: 1px solid #444;
+}
+
+#menu {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navigation Links */
+.nav-link {
+  color: white !important;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #ffffff;
+  color: #ffb400 !important;
+}
