@@ -4,6 +4,7 @@ import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="footer">
+      <h2 id="foot-head">The Product Club</h2>
       <div className="social-icons">
         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="icon" />

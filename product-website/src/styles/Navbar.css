@@ -1,6 +1,6 @@
 /* Navbar Customization */
 .navbar-custom {
-  background-color: #898479 !important;
+  background-color: #ffb400 !important;
   padding: 10px 15px;
 }
 
@@ -12,6 +12,7 @@
 
 /* Hamburger Button */
 .navbar-toggler {
+  color: #ffb400;
   border: none;
 }
 

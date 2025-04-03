@@ -1,5 +1,5 @@
 body {
-    background: rgb(251, 251, 251);
+    background: rgb(28, 28, 25);
 /* background: linear-gradient(90deg, rgba(108,108,99,1) 0%, rgba(142,129,86,1) 46%, rgba(166,166,138,1) 100%); */
 }
 
@@ -20,7 +20,7 @@ body {
     margin-top: 20px;
     font-size: 4rem;
     font-weight: bold;
-    color: black; /* Ensure visibility */
+    color: rgb(253, 253, 253); /* Ensure visibility */
     animation: fadeInUp 1s ease-out;
 }
 
@@ -59,7 +59,7 @@ img {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 40px;
-    color: #222;
+    color: #eeeeee;
 }
 
 /* Heading styles for "WHAT WE DO" */
@@ -76,7 +76,7 @@ img {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 40px;
-    color: #222;
+    color: #eeeeee;
 }
 
 /* Achievements Section */
@@ -92,7 +92,7 @@ img {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 30px;
-    color: #222;
+    color: #ffb400;
 }
 
 /* Achievements Grid */
@@ -105,7 +105,7 @@ img {
 
 /* Individual Achievement Card */
 .achievement-card {
-    background-color: #f0be4a;
+    background-color: #d8d6d0;
     padding: 20px;
     border-radius: 10px;
     text-align: left;
@@ -116,6 +116,6 @@ img {
 /* Hover Effect */
 .achievement-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 10px 20px rgba(231, 187, 10, 0.859);
 }
 
