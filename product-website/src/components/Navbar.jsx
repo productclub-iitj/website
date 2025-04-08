@@ -28,7 +28,7 @@ const MyNavbar = () => {
         <Offcanvas.Body>
           <Nav className="flex-column">
             <Nav.Link href="#about" onClick={() => setShow(false)}>About</Nav.Link>
-            <Nav.Link href="#team" onClick={() => setShow(false)}>Team</Nav.Link>
+            <Nav.Link href="./team" onClick={() => setShow(false)}>Team</Nav.Link>
             <Nav.Link href="#resources" onClick={() => setShow(false)}>Resources</Nav.Link>
           </Nav>
         </Offcanvas.Body>
