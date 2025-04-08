@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Navbar, Offcanvas, Nav, Container } from 'react-bootstrap';
 import "../styles/Navbar.css";
-import logo from '../images/logo.png';
+import logo from '../images/Product_club_Logo-removebg-Preview.png';
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
