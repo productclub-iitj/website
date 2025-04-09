@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Navbar, Offcanvas, Nav, Container } from 'react-bootstrap';
 import "../styles/Navbar.css";
 import logo from '../images/Product_club_Logo-removebg-Preview.png';
-
+import { Link } from 'react-router-dom';
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
 
@@ -28,7 +28,7 @@ const MyNavbar = () => {
         <Offcanvas.Body>
           <Nav className="flex-column">
             <Nav.Link href="#about" onClick={() => setShow(false)}>About</Nav.Link>
-            <Nav.Link href="./team" onClick={() => setShow(false)}>Team</Nav.Link>
+            <Nav.Link href ="./team" onClick={() => setShow(false)}>Team</Nav.Link>
             <Nav.Link href="#resources" onClick={() => setShow(false)}>Resources</Nav.Link>
           </Nav>
         </Offcanvas.Body>
