@@ -1,121 +1,180 @@
 body {
-    background: rgb(28, 28, 25);
-/* background: linear-gradient(90deg, rgba(108,108,99,1) 0%, rgba(142,129,86,1) 46%, rgba(166,166,138,1) 100%); */
-}
-
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#main-heading {
-    text-align: center;
-    margin-top: 20px;
+    background: #343232;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  .home-container {
+    width: 100%;
+  }
+  
+  /* Hero Section - Top part with background image */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    width: 80%;
+    max-width: 1200px;
+    padding-top: 120px;
+  }
+  
+  .hero-content h2 {
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    color: white;
+  }
+  
+  .hero-content h1 {
     font-size: 4rem;
     font-weight: bold;
-    color: rgb(253, 253, 253); /* Ensure visibility */
-    animation: fadeInUp 1s ease-out;
-}
-
-
-/* Full-width image */
-img {
+    margin-top: 10px;
+    color: #ffb400;
+  }
+  
+ /* Photo Section Styling */
+.photos-section {
     width: 100%;
-    height: 600px;
-    /* Maintain aspect ratio */
-    display: block;
-}
-
-/* Styling for the "who-we" section */
-.who-we {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 0 20px;
-    text-align: center;
-    border: 2px solid #ccc;
-    /* border-radius: 3%; */
-    border-left: none;
-    border-right: none;
-}
-
-/* Heading styles for "WHO WE ARE" */
-#head-who {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: #ffb400;
-}
-
-/* Paragraph styles for "WHO WE ARE" */
-#who-p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 40px;
-    color: #eeeeee;
-}
-
-/* Heading styles for "WHAT WE DO" */
-#head-what {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: #ffb400;
-}
-
-/* Paragraph styles for "WHAT WE DO" */
-#what-p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 40px;
-    color: #eeeeee;
-}
-
-/* Achievements Section */
-.achievements {
+    overflow: hidden;
+    padding: 50px 0;
+    background-color: #333;
+    position: relative;
+    margin-top: -1px; /* Ensure smooth connection with hero section */
+  }
+  
+  .photos-container {
+    display: flex;
+    width: 400%; /* 100% * 4 photos */
+    
+    animation: slidePhotos 130s linear infinite;
+  }
+  
+  .photo-item {
+    width: 25%; /* 100% / 4 photos */
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  }
+  
+  /* .photo-item img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 180, 0, 0.3);
+  } */
+  
+  @keyframes slidePhotos {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200%); /* Move 2 complete sets to create seamless loop */
+    }
+  }
+  
+  /* Who We Are & What We Do Section */
+  .info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 80px auto;
+    gap: 100px;
+  }
+  
+  .info-column {
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
+    /* border: 2px solid #ffb400; */
+  }
+  
+  .info-column h2 {
+    font-size: 3rem;
+    color: #ffb400;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  
+  .info-column p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #eeeeee;
+  }
+  
+
+  
+  /* Original Achievements Section Styling */
+  .original-achievements {
+    width: 80%;
+    max-width: 1200px;
+    margin: 100px auto;
     padding: 20px;
     text-align: center;
-    color: white;
-}
-
-#achievements-heading {
+  }
+  
+  #achievements-heading {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 30px;
     color: #ffb400;
-}
-
-/* Achievements Grid */
-.achievements-grid {
+  }
+  
+  .original-achievements .achievements-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    justify-content: center;
-}
-
-/* Individual Achievement Card */
-.achievement-card {
+  }
+  
+  .original-achievements .achievement-card {
     background-color: #d8d6d0;
     padding: 20px;
     border-radius: 10px;
     text-align: left;
     color: #222;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover Effect */
-.achievement-card:hover {
+    height: auto;
+  }
+  
+  .original-achievements .achievement-card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 10px 20px rgba(231, 187, 10, 0.859);
-}
-
+  }
+  
+  .original-achievements .achievement-card h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
