@@ -1,39 +1,54 @@
-import { useState } from 'react';
-import { Navbar, Offcanvas, Nav, Container } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import "../styles/Navbar.css";
 import logo from '../images/Product_club_Logo-removebg-Preview.png';
 import { Link } from 'react-router-dom';
+
 const MyNavbar = () => {
-  const [show, setShow] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Add scroll event listener to change navbar appearance on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <>
-      <Navbar bg="dark" variant="dark" expand={false} className="navbar-custom">
-        <Container>
-          {/* Logo on the left */}
-          <Navbar.Brand href="/">
-            <img src={logo} alt="Logo" className="d-inline-block align-top" />
-          </Navbar.Brand>
-          
-          {/* Hamburger icon on the right */}
-          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={() => setShow(true)} />
-        </Container>
-      </Navbar>
-
-      {/* Offcanvas Menu */}
-      <Offcanvas show={show} onHide={() => setShow(false)} placement="end" className="offcanvas-custom">
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title id='menu'>Menu</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <Nav className="flex-column">
-            <Nav.Link href="#about" onClick={() => setShow(false)}>About</Nav.Link>
-            <Nav.Link href ="./team" onClick={() => setShow(false)}>Team</Nav.Link>
-            <Nav.Link href="#resources" onClick={() => setShow(false)}>Resources</Nav.Link>
+    <Navbar 
+      bg="dark" 
+      variant="dark" 
+      expand="lg" 
+      className={`navbar-custom ${scrolled ? 'scrolled' : ''}`}
+      fixed="top"
+    >
+      <Container>
+        {/* Logo on the left */}
+        <Navbar.Brand as={Link} to="/">
+          <img src={logo} alt="Logo" className="d-inline-block align-top" />
+        </Navbar.Brand>
+        
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/resources">Resources</Nav.Link>
+            <Nav.Link as={Link} to="/team">Team</Nav.Link>
+            <Nav.Link as={Link} to="/events">Events</Nav.Link>
+            <Nav.Link as={Link} to="/achievements">Achievements</Nav.Link>
           </Nav>
-        </Offcanvas.Body>
-      </Offcanvas>
-    </>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
