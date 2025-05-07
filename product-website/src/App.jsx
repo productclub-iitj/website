@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import MyNavbar from './components/Navbar';
 import Team from './pages/Team';
 import Footer from './components/Footer';
+import Resources from './pages/Resources';
 function App() {
   return (
     <Router>
@@ -10,6 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/resources" element={<Resources />} />
+        {/* Add more routes as needed */}
       </Routes>
       {/* <Footer/> */}
     </Router>
