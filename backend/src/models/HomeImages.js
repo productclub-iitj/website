@@ -3,3 +3,4 @@ const homeImageSchema = new mongoose.Schema({
   image: String,
 });
 const HomeImage = mongoose.model("HomeImage", homeImageSchema);
+export default HomeImage;

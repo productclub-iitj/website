@@ -32,7 +32,7 @@ const MyNavbar = () => {
       fixed="top"
     >
       <Container>
-        {/* Logo on the left */}
+        
         <Navbar.Brand as={Link} to="/">
           <img src={logo} alt="Logo" className="d-inline-block align-top" />
         </Navbar.Brand>
