@@ -5,6 +5,7 @@ import teamRoutes from "./src/routes/teamRoutes.js";
 import cors from 'cors';
 import alumniRoutes from "./src/routes/aluminiRoutes.js";
 import homeRoutes from "./src/routes/HomeRoutes.js";
+import eventsRoutes from "./src/routes/eventsRoutes.js";
 // Load env variables
 dotenv.config({ path: "./.env" });
 
@@ -20,6 +21,7 @@ app.use(cors());
 app.use("/api/team", teamRoutes);
 app.use("/api/alumni", alumniRoutes);
 app.use("/api/home",homeRoutes);
+app.use("/api/events",eventsRoutes);
 
 
 // DB + Server
