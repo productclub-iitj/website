@@ -44,7 +44,7 @@ const MyNavbar = () => {
             <Nav.Link as={Link} to="/resources">Resources</Nav.Link>
             <Nav.Link as={Link} to="/team">Team</Nav.Link>
             <Nav.Link as={Link} to="/events">Events</Nav.Link>
-            <Nav.Link as={Link} to="/achievements">Achievements</Nav.Link>
+            <Nav.Link as={Link} to="/alumni">Alumni</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

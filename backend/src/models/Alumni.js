@@ -6,7 +6,7 @@ const alumniSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  batchOf: {
+  year: {
     type: String,
     required: true,
     trim: true
@@ -16,7 +16,7 @@ const alumniSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  image: {
+  photo: {
     type: String,
     required: true,
     trim: true
