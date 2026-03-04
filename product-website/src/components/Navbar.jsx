@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import "../styles/Navbar.css";
-import logo from '../images/Product_club_Logo-removebg-Preview.png';
+import logo from '../images/Product_Club_Logo-removebg-preview.png';
 import { Link } from 'react-router-dom';
 
 const MyNavbar = () => {
